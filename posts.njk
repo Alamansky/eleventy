@@ -1,9 +1,15 @@
 ---
+layout: page.njk
 pagination:
     data: posts
     size: 1
     alias: post
-permalink: "post/{{ post.key | slug }}/"
+permalink: "post/{{ post.slug | slug }}/"
 ---
 
-    {{ post.key }} is the target text
+<h1>
+    {{ post.title.rendered }} 
+</h1>
+<p>
+    {{ post.content.rendered | safe }}
+</p>

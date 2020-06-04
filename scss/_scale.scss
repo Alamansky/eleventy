@@ -1,0 +1,20 @@
+@use 'sass:list';
+
+$ratio: 1.618;
+$base1: 10;
+$base2: 5;
+
+$scale: divide-by-ten(sort(join(createscale($ratio, $base1, 4), createscale($ratio, $base2, 4))));
+
+@debug $scale;
+// 0.809 1.30896 1.618 2.1179 2.61792 3.42676 4.2358 6.85353
+
+@function s($index) {
+	@if nth($scale, $index) {
+		@return #{nth($scale, $index)}rem;
+	}
+
+	@warn 'Unknown index of `#{$index}` in $scale.';
+
+	@return null;
+}

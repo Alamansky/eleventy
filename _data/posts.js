@@ -1,3 +1,8 @@
-module.exports = function () {
-    return [{ key: 'string1' }, { key: 'string2' }, { key: 'string3' }]
+const fetch = require("node-fetch");
+const endpoints = require('../endpoints.json');
+
+module.exports = async function () {
+    const rawData = await fetch(endpoints.posts);
+    const posts = await rawData.json();
+    return posts;
 }

@@ -1,0 +1,17 @@
+@mixin devborder {
+	border: 2px solid c(blck);
+}
+
+@mixin flex-vertical-center {
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.position-relative {
+	position: relative !important;
+}

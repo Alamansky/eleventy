@@ -1,0 +1,18 @@
+// breakpoints taken from Bulma CSS
+
+// Small devices (landscape phones, 576px and up)
+$mobile: 'screen and (min-width: 576px)';
+
+// Medium devices (tablets, 768px and up)
+$tablet: 'screen and (min-width: 768px)';
+
+// Large devices (desktops, 1023px and up)
+$desktop: 'screen and (min-width: 1023px)';
+
+// Extra large devices (large desktops, 1215px and up)
+$desktop-wide: 'screen and (min-width: 1215px)';
+
+// example usage
+/* @media #{$desktop} {
+    padding: 0;
+} */

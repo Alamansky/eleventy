@@ -1,7 +1,8 @@
 {
-  "name": "dockerfiles-node",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/usr/src/app",
-  "shutdownAction": "stopCompose"
+	"name": "dockerfiles-node",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/usr/src/app",
+	"shutdownAction": "stopCompose",
+	"extensions": ["shinnn.stylelint", "esbenp.prettier-vscode"]
 }

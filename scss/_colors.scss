@@ -1,0 +1,21 @@
+/** @format */
+
+$colors: (
+	blck: rgb(51, 51, 51),
+	wht: rgb(255, 255, 255),
+	gry: rgb(243, 238, 235),
+	primary: rgb(0, 85, 78),
+	primary--dark: rgb(0, 61, 56),
+	primary--light: rgb(2, 199, 182),
+	secondary: rgb(255, 108, 100),
+);
+
+@function c($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key);
+	}
+
+	@warn 'Unknown `#{$key}` in $colors.';
+
+	@return null;
+}

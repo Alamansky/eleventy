@@ -1,24 +1,36 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alamansky/dockerfiles.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Alamansky/dockerfiles/issues"
-  },
-  "homepage": "https://github.com/Alamansky/dockerfiles#readme"
+	"name": "app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"node-fetch": "^2.6.0"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^0.11.0",
+		"gulp": "^4.0.2",
+		"gulp-js-import": "^1.0.6",
+		"gulp-sass": "^4.1.0",
+		"prettier": "^2.0.5",
+		"stylelint": "^13.4.0",
+		"stylelint-config-standard": "^20.0.0",
+		"stylelint-scss": "^3.17.2",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "npx @11ty/eleventy --quiet --serve & npx gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alamansky/dockerfiles.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Alamansky/dockerfiles/issues"
+	},
+	"homepage": "https://github.com/Alamansky/dockerfiles#readme"
 }
