@@ -3,8 +3,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addWatchTarget('./scripts/');
 	return {
 		dir: {
-			includes: '_includes',
-			layouts: '_layouts',
+			input: 'src',
+			includes: './_includes',
+			layouts: './_layouts',
 		},
 	};
 };

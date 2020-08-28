@@ -1,0 +1,85 @@
+#page {
+	width: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 90vh;
+	padding: s(4);
+
+	@media #{$desktop-bp} {
+		width: 80%;
+		height: 100vh;
+	}
+}
+
+#post {
+	@include content;
+}
+
+#footer {
+	text-align: center;
+	width: 50%;
+	min-width: 800px;
+	margin: 0 auto;
+	margin-top: 4rem;
+	padding: 4rem 0;
+	border-top: 1px solid rgba(c(blck), 0.3);
+
+	@media (max-width: 800px) {
+		width: 80%;
+		min-width: 0;
+	}
+}
+
+.about {
+
+	display: grid;
+	grid-template-rows: auto auto;
+	row-gap: 2rem;
+
+
+	@media #{$mobile-bp} {
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
+}
+
+.wrapper {
+	@include content;
+}
+
+.fancy-title {
+	border-bottom: 0.3rem solid rgba(255, 108, 100, 0.5);
+	display: inline-block;
+}
+
+.contact__images {
+	display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact__copy {
+	margin-bottom: 2rem;
+}
+
+.button {
+	// override mc styles
+	height: auto !important;
+	line-height: auto !important;
+
+	border: 2px solid rgba(2, 199, 182, 0.7) !important;
+    color: #02c7b6 !important;
+	background-color: rgba(255, 255, 255, 0) !important;
+	
+	&:hover {
+		background-color: #02c7b6 !important;;
+		color: rgba(255, 255, 255, 1) !important;
+	}
+
+}

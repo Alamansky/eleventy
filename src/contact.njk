@@ -1,0 +1,27 @@
+---
+layout: page.njk
+---
+<div class="wrapper">
+	<div class="contact">
+		<img class="reyes u-shadow" src={{contact['_embedded']['wp:featuredmedia']['0'].media_details.sizes.full.source_url}}>
+		<div>
+			<h2 class="title is-2 fancy-title">{{ contact.title.rendered}}</h2>
+			<div class="content">
+				<div class="contact__copy">
+					{{ contact.content.rendered | safe}}
+				</div>
+				<hr>
+				{% include 'Form/Form.njk' %}
+				<hr>
+				<div class="contact__images">
+					<a class="contact__link" target="_blank" href={{ contact.acf.left_side_image_link_url }}>
+						<img class="color-on-hover" src={{ contact.acf.left_side_image }}>
+					</a>
+					<a class="contact__link" target="_blank" href={{ contact.acf.right_side_image_link_url }}>
+						<img class="color-on-hover" src={{ contact.acf.right_side_image }}>
+					</a>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>

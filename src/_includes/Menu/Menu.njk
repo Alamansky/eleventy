@@ -1,0 +1,20 @@
+<div class="menu">
+		<div class="dropdown" id="dropdown-trigger">
+			<div class="dropdown-trigger">
+				<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+					<span class="icon is-small">
+						<i class="fas fa-bars" aria-hidden="true"></i>
+					</span>
+				</button>
+			</div>
+			<div class="dropdown-menu u-no-min-width">
+				<ul class="menu-list dropdown-content u-no-shadow">
+					{% for menu__item in menu %}
+						<ul>
+							<a href="{{ menu__item.link | lower }}" class="menu-list dropdown-item">{{ menu__item.name }}</a>
+						</ul>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>

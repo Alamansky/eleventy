@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <img class="sidebar__logo" src={{ profile.acf.logo }}>
+	<h5 class="title is-5 sidebar__tagline text-center is-hidden-touch">{{ profile.acf.blurb }}</h5>
+	<div class="profile">
+		<figure class="image">
+			<img class="sidebar__image u-shadow reyes is-hidden-touch" src={{ profile.acf.image }}>
+		</figure>
+		<a class= "profile__social enlarge-on-hover" target="_blank" href={{ social.acf.social_media_url }}>
+				<img class="profile__social__icon" src={{ social.acf.icon }}>
+		</a>
+	</div>
+	{% include '../Menu/Menu.njk' %}
+</div>

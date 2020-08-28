@@ -1,0 +1,88 @@
+@media screen and (max-width: "screen and (min-width: 768px)" - 1px) {
+	.is-hidden-mobile {
+	  display: none !important; } }
+
+.sidebar {
+	position: fixed;
+	@include flex-vertical-center;
+	padding: 0 s(4);
+	height: 10vh;
+	width: 100%;
+	justify-content: space-between;
+	border-bottom: 2px solid rgba(c(primary--light), 0.5);
+	z-index: 99;
+	background-color: c(wht);
+
+	> * {
+		margin-bottom: 0;
+	}
+
+	@media #{$desktop-bp} {
+		padding: s(4);
+		border-right: 5px solid rgba(c(primary--light), 0.5);
+		border-bottom: none;
+		height: 100vh;
+		width: 20%;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		align-content: stretch;
+
+		> * {
+			margin-bottom: s(4);
+		}
+	}
+
+	&__logo {
+		max-width: 25%;
+		max-height: 50%;
+		border-top: 1px solid c(blck);
+		border-bottom: 1px solid c(blck);
+
+		@media #{$desktop-bp} {
+			max-width: 100%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		max-width: 15rem;
+		border-radius: 10px;
+		margin: 0 auto;
+	}
+}
+
+.profile {
+
+	position: relative;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: 2rem;
+
+	@media #{$desktop-bp} {
+		margin-left: none;
+		margin-right: 0;
+	}
+
+	&__social {
+		background-color: c(wht);
+		border: 2px solid c(secondary);
+		border-radius: 50%;
+		padding: 0.4rem;
+
+		@media #{$desktop-bp} {
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
+			padding: 0.7 rem;
+		}
+
+		&__icon {
+			width: 2rem;
+			opacity: 0.5;
+		}
+	}
+
+}

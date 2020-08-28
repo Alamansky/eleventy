@@ -1,0 +1,14 @@
+---
+layout: page.njk
+---
+<div class="wrapper">
+	<div class="about">
+		<img class="reyes u-shadow" src={{about['_embedded']['wp:featuredmedia']['0'].media_details.sizes.full.source_url}}>
+		<div>
+			<h2 class="title is-2 fancy-title">{{ about.title.rendered}}</h2>
+			<div>
+				{{ about.content.rendered | safe}}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+---
+layout: page.njk
+permalink: "/"
+---
+
+{% from "Card/Card.njk" import card %}
+
+<section class="card-container">
+	{% for item in feed %}
+		<a href="/{{ ("story" if item.categories[0] == "3" else "post") + "/" + item.slug }}">
+			{{ card(item.title.rendered, item.acf.subtitle, item['_embedded']['wp:featuredmedia']['0'].media_details.sizes.full.source_url, item.excerpt.rendered) }}
+		</a>
+	{% endfor %}
+</section>

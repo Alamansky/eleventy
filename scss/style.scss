@@ -1,12 +1,13 @@
 @import 'reset';
 @import 'functions';
-@import 'utility';
 @import 'mediaqueries';
 @import 'typography';
 @import 'colors';
 @import 'scale';
-@import '../_includes/Sidebar/Sidebar';
+@import 'utility';
+@import 'forms';
+@import 'app';
 
-h1 {
-	color: rgba(0, 0, 0, 0);
-}
+@import '../src/_includes/Sidebar/Sidebar';
+
+@import '../node_modules/bulma/bulma.sass';

@@ -1,0 +1,20 @@
+{% macro card(title, subtitle, image, excerpt) %}
+<div class="card u-full-height u-even-cards color-on-hover">
+	<div class="card-image">
+		<figure class="image is-4by3">
+			<img src={{ image }}>
+		</figure>
+	</div>
+	<div class="card-header u-flex-column u-border-bottom">
+		<h2 class="title is-4 card-header-title u-no-bottom-margin text-center">
+			{{ title }}
+		</h2>
+		<h4 class="title is-6 card-header-title text-center u-light-text">
+			{{ subtitle }}
+		</h4>
+	</div>
+	<div class="card-content">
+		{{ excerpt | safe }}
+	</div>
+</div>
+{% endmacro %}

@@ -1,0 +1,13 @@
+---
+layout: page.njk
+---
+
+{% from "Card/Card.njk" import card %}
+
+<section class="card-container">
+	{% for story in stories %}
+		<a href="/story/{{ story.slug }}">
+			{{ card(story.title.rendered, story.acf.subtitle, story['_embedded']['wp:featuredmedia']['0'].media_details.sizes.full.source_url, story.excerpt.rendered) }}
+		</a>
+	{% endfor %}
+</section>

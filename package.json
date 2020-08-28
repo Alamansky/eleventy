@@ -4,12 +4,15 @@
 	"description": "",
 	"main": "index.js",
 	"dependencies": {
+		"bulma": "^0.9.0",
 		"node-fetch": "^2.6.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.11.0",
 		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.3.0",
 		"gulp-js-import": "^1.0.6",
+		"gulp-purgecss": "^2.3.0",
 		"gulp-sass": "^4.1.0",
 		"prettier": "^2.0.5",
 		"stylelint": "^13.4.0",
@@ -20,7 +23,7 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "npx @11ty/eleventy --quiet --serve & npx gulp"
+		"dev": "npx @11ty/eleventy --serve & npx gulp"
 	},
 	"repository": {
 		"type": "git",
